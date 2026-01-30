@@ -4,14 +4,13 @@ class titForTat():
         self.name = "TitForTat"
     def decision(self, history):
 
-        #history will be a list of what 
+        # history will be a list of what 
 
         # if opponent rejected
             # then reject
         # else
             # then accept
-
-
+            
         return 0
 
 class alwaysAccept():
@@ -39,7 +38,8 @@ class tournament():
         for policy in self.policies:
             print(policy.name)
 
-titfortat = titForTat()
-alwaysAccept = alwaysAccept()
-t = tournament( [titfortat, alwaysAccept] )
+
+titfortat = titForTat()   # creating a titfortat policy
+alwaysAccept = alwaysAccept() # creating a alwaysaccept policy
+t = tournament( [titfortat, alwaysAccept] )  #create the tournament.
 t.run()
