@@ -7,4 +7,3 @@ class tournament():
 
 t = tournament()
 t.hi()
-t.hi()
