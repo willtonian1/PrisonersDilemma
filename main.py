@@ -1,4 +1,10 @@
 
+class titForTat():
+    def __init__(self):
+        self.name = "TitForTat"
+    def decision():
+        return 0
+
 class match():
     def __init__(self, p1, p2):
         p1 = p1
@@ -8,11 +14,13 @@ class match():
     
 
 class tournament():
-    def __init__(self):
-        x = 0
-    def hi(self):
-        print("hi")
+    def __init__(self, policies):
+        self.policies = policies
 
+    def run(self):
+        for policy in self.policies:
+            print(policy.name)
 
-t = tournament()
-t.hi()
+a = titForTat()
+t = tournament([a])
+t.run()
