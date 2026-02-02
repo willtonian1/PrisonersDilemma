@@ -56,6 +56,22 @@ class AlwaysDefect(Policy):
         self.name = "Always Defect"
     def decision(self, my_history, opponent_history) -> int:
         return 0
+
+class TitFor2Tat(Policy):
+    def __init__(self):
+        self.name = "Tit For 2 Tat"
+        
+    def decision(self, my_history, opponent_history) -> int:
+
+        # First action of the game.  
+        if len(opponent_history) <2:
+            return 1
+
+        # All other actions.  
+        if opponent_history[-1] and opponent_history[-2] == 0:
+            return 0
+        else:
+            return 1
     
 class Tournament():
     '''Handles the main logic of the tournament.     
